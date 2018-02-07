@@ -9,28 +9,35 @@
       <meta charset='utf-8'>
 	</head>
 	<body>
-
-	  <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-          <a class="navbar-brand" href="#">Germán Andrade</a>
-          </div>
-           <ul class="nav navbar-nav">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Germán Andrade</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
       <li class="active"><a href="#interests">Interests</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#games">Games</a></li>
       <li><a href="#skills">Skills</a></li>
+      </ul>
+      
+  </div>
+</nav>
+
+	  
            	<!--
-           	  <li class="active"><a href="#">Home</a></li>
-		    <li>< class = "active" <a href="#interests">Home<a/></li>
-		    <li><a href="#interests">Interests<a/></li>
-		    <li><a href="#experience">Experience<a/></li>
-		    <li><a href="#games">Games<a/></li>
-		    <li><a href="#skills">Skills<a/></li>
+      <li class="active"><a href="#interests">Interests</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#skills">Skills</a></li>
+           
 		    -->
-           </ul>
-        </div>
-      </nav>
 		<div align="center">
 		  <br/>
 		  <br/>
@@ -101,7 +108,7 @@
 		</script>
 
 		<script type="text/javascript">
-			var colors =["black", "white", "green","blue","red"];
+			var colors =["black", "#a3a375", "green","blue","red"];
 			var ul = document.getElementById("lista");
 			var items = ul.getElementsByTagName("li");
 			var numbers = 	new Array(items.length);
@@ -121,7 +128,7 @@
   				items[i].style.color=colors[numbers[i]];
 			}
 
-
+			items[0].style.color="#1a0000";
 
 			function getRandomInt(min, max) 
 			{
