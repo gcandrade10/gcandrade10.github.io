@@ -23,7 +23,7 @@
       <ul class="nav navbar-nav">
       <li class="active"><a href="#interests">Interests</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#games">Games</a></li>
+      <li><a href="#games">Hobbies</a></li>
       <li><a href="#skills">Skills</a></li>
       </ul>
       
@@ -46,8 +46,13 @@
 		  <h1 id="home">Germán Andrade</h1>
 		  <img src="https://avatars0.githubusercontent.com/u/20799567?s=400&u=dd7d31161f97b1560d9b938579c2bf24937b4d9b&v=4"
 		  alt="picture of myself" class="img-circle mainImage"  align="rigth" />
-		  <p>I'm from Bogotá, Colombia. <br/>Since I was a child I have been really curious, I want to know how the world works thats the reason I'm studying engineering <br/>
-		  </p>
+		 
+			<ul id="listaCaracteristicas">
+		      <li class="item">Minimalist.&emsp;</li>
+		      <li class="item">Curious.&emsp;</li>
+		      <li class="item">Colombian.&emsp;</li>
+		      <li class="item">Pragmatic.&emsp;</li>
+
 		  </div>
 
 		  <div class="divMenu divInterests">
@@ -68,15 +73,19 @@
 		  </div>
 
 		  <div class="divMenu divGames">
-          	  <h1 id="games"> Games </h1>
+          	  <h1 id="games"> Hobbies </h1>
               <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/chess.jpg" class="img-circle games"></a>
 		      <a  href="http://us.battle.net/sc2/en/profile/1362738/2/Hanibal/" target="_blank"><img src="./images/zerg.jpg" class="img-circle games" /> </a>
+		      <a  href="http://www.deezer.com/playlist/2360140206" target="_blank"><img src="./images/music.png" class="img-circle games" /> </a>
+			  <a  href="https://en.wikipedia.org/wiki/Ultimate_(sport)" target="_blank"><img src="./images/ultimate.jpg" class="img-circle games" /> </a>
+		      
+
 			
           </div>
 
           <div class="divMenu divSkills">
           	  <h1 id="skills"> Skills </h1>
-              <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/cess.jpg" class="img-circle games"></a>
+              <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/lider.jpg" class="img-circle games"></a>
 		      <a  href="http://us.battle.net/sc2/en/profile/1362738/2/Hanibal/" target="_blank"><img src="./images/zeg.jpg" class="img-circle games" /> </a>
 			
           </div>
@@ -108,9 +117,12 @@
 		</script>
 
 		<script type="text/javascript">
-			var colors =["black", "#a3a375", "green","blue","red"];
+			var colors =["#00b300","blue","red","#ff6600","#660066","#x"];
 			var ul = document.getElementById("lista");
-			var items = ul.getElementsByTagName("li");
+			var itemsP = ul.getElementsByTagName("li");
+
+			function pintar(items)
+			{
 			var numbers = 	new Array(items.length);
 
 			for (var i = 0;i<items.length; i++) 
@@ -128,7 +140,16 @@
   				items[i].style.color=colors[numbers[i]];
 			}
 
-			items[0].style.color="#1a0000";
+			
+			}
+
+			pintar(itemsP);
+
+			var ul1 = document.getElementById("listaCaracteristicas");
+			var intereses = ul1.getElementsByTagName("li");
+
+			pintar(intereses);
+
 
 			function getRandomInt(min, max) 
 			{
