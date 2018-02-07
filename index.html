@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+	
 	<head>
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <title>Germán Andrade</title>
@@ -8,32 +9,76 @@
       <meta charset='utf-8'>
 	</head>
 	<body>
-		<div align="center">
-	      <ul>
-		    <li><a href="#about">About me<a/></li>
-		    <li><a href="#projects">Projects<a/></li>
+
+	  <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+          <a class="navbar-brand" href="#">Germán Andrade</a>
+          </div>
+           <ul class="nav navbar-nav">
+      <li class="active"><a href="#interests">Interests</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#skills">Skills</a></li>
+           	<!--
+           	  <li class="active"><a href="#">Home</a></li>
+		    <li>< class = "active" <a href="#interests">Home<a/></li>
+		    <li><a href="#interests">Interests<a/></li>
+		    <li><a href="#experience">Experience<a/></li>
 		    <li><a href="#games">Games<a/></li>
 		    <li><a href="#skills">Skills<a/></li>
-		  </ul>
-		  <h1 id="about">About me</h1>
+		    -->
+           </ul>
+        </div>
+      </nav>
+		<div align="center">
+		  <br/>
+		  <br/>
+		  <div class="divMenu divHome">
+		  	
+		  <h1 id="home">Germán Andrade</h1>
 		  <img src="https://avatars0.githubusercontent.com/u/20799567?s=400&u=dd7d31161f97b1560d9b938579c2bf24937b4d9b&v=4"
-		  alt="picture of myself" class="img-circle"  align="rigth" />
+		  alt="picture of myself" class="img-circle mainImage"  align="rigth" />
 		  <p>I'm from Bogotá, Colombia. <br/>Since I was a child I have been really curious, I want to know how the world works thats the reason I'm studying engineering <br/>
-		  My main interests are: <br/>
 		  </p>
-		  <ul>
-		    <li>Security 2</li>
-		    <li>Web development</li>
-		    <li>Bioinformatics</li>
-		    <li>Competitive programing</li>
-		  </ul>
-		  <h1 id="projects">Projects</h1>
-          <h1 id="games"> Games </h1>
-		  <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/chess.jpg" class="img-circle games"></a>
-		  <a  href="https://starcraft2.com/en-us/"> <img src="./images/zerg.jpg" class="img-circle games" /> </a></li>
+		  </div>
+
+		  <div class="divMenu divInterests">
+            <h1 id="interests"> Interests </h1>
+            <ul id="lista">
+		      <li class="item">Security 2</li>
+		      <li class="item">Web development</li>
+		      <li class="item">Bioinformatics</li>
+		      <li class="item">Competitive programing</li>
+		    </ul>
+		  </div>
+		  
+		  <div class="divMenu divExperience">
+		  <h1 id="experience">Experience</h1>
+		  <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/ngsep.png" class="img-circle games"></a>
+		  <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/cupitaller.png" class="img-circle games"></a>
+		  <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/uniandes.jpg" class="img-circle games"></a>
+		  </div>
+
+		  <div class="divMenu divGames">
+          	  <h1 id="games"> Games </h1>
+              <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/chess.jpg" class="img-circle games"></a>
+		      <a  href="http://us.battle.net/sc2/en/profile/1362738/2/Hanibal/" target="_blank"><img src="./images/zerg.jpg" class="img-circle games" /> </a>
+			
+          </div>
+
+          <div class="divMenu divSkills">
+          	  <h1 id="skills"> Skills </h1>
+              <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/cess.jpg" class="img-circle games"></a>
+		      <a  href="http://us.battle.net/sc2/en/profile/1362738/2/Hanibal/" target="_blank"><img src="./images/zeg.jpg" class="img-circle games" /> </a>
+			
+          </div>
+
 		</div>
 		
 		<!-- scripts -->
+
+		
 
 		<script
           src="http://code.jquery.com/jquery-3.3.1.min.js"
@@ -47,6 +92,41 @@
 
        <!-- Latest compiled and minified JavaScript -->
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		
+
+		<script type="text/javascript">
+			$('.nav.navbar-nav > li').on('click', function(e) {
+    $('.nav.navbar-nav > li').removeClass('active');
+    $(this).addClass('active');
+});  
+		</script>
+
+		<script type="text/javascript">
+			var colors =["black", "white", "green","blue","red"];
+			var ul = document.getElementById("lista");
+			var items = ul.getElementsByTagName("li");
+			var numbers = 	new Array(items.length);
+
+			for (var i = 0;i<items.length; i++) 
+			{
+				var posible=getRandomInt(0,items.length);
+				while(i!==0 && posible===numbers[i-1])
+				{
+					posible=getRandomInt(0,items.length);
+				}
+				numbers[i]=posible;
+			}
+			
+			for (var i = 0; i < items.length; ++i) 
+			{
+  				items[i].style.color=colors[numbers[i]];
+			}
+
+
+
+			function getRandomInt(min, max) 
+			{
+  			return Math.floor(Math.random() * (max - min)) + min;
+			}
+		</script>
 	</body>
 </html>

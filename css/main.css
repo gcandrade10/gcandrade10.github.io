@@ -5,6 +5,47 @@ p {
 }
 .games
 {
-height: 15%;
-width: 15%;
+height: 21%;
+width: 21%;
+}
+.mainImage
+{
+	height: 23%;
+	width: 23%;
+}
+
+.divMenu
+{
+  display:inline-block;
+  width:100%;
+}
+
+.divHome
+{
+	background-color: #80b7ff;
+}
+
+.divInterests
+{
+	background-color: #99c5ff;
+}
+
+.divExperience
+{
+	background-color:#b3d4ff;
+}
+
+.divGames
+{
+	background-color:#cce2ff;
+}
+.divSkills
+{
+	background-color:#e6f1ff;
+}
+
+.item 
+{ 
+	display: inline; 
+	font-size: 2em;
 }
