@@ -1,7 +1,5 @@
-p {
-    font-family: "Times New Roman", Times, serif;
-    color:black;
-    size:1em;
+h1 {
+    color: green;
 }
 .games
 {
@@ -27,25 +25,26 @@ width: 21%;
 
 .divInterests
 {
-	background-color: #99c5ff;
+	background-color: #002a66;
 }
 
 .divExperience
 {
-	background-color:#b3d4ff;
+	background-color:#00204d;
 }
 
 .divGames
 {
-	background-color:#cce2ff;
+	background-color:#001533;
 }
 .divSkills
 {
-	background-color:#e6f1ff;
+	background-color:#000b1a;
 }
 
 .item 
 { 
 	display: inline; 
 	font-size: 2em;
+	
 }
