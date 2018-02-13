@@ -2,10 +2,12 @@
 <html>
 	
 	<head>
-	  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <!--
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       -->
       <title>Germán Andrade</title>
       <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
       <link rel="stylesheet" type="text/css" href="./css/main.css">
       
       <meta charset='utf-8'>
@@ -15,9 +17,9 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
+        <span class="icon-bar">1</span>
+        <span class="icon-bar">2</span>
+        <span class="icon-bar">3</span> 
       </button>
       <a class="navbar-brand" href="#">Germán Andrade</a>
     </div>
@@ -41,7 +43,7 @@
            
 		    -->
 		    <br/>
-		    <h1>testing</h1>
+
 		<div align="center">
 		  <br/>
 		  <br/>
@@ -62,7 +64,7 @@
 		  <div class="divMenu divInterests">
             <h1 id="interests"> Interests </h1>
             <ul id="lista">
-		      <li class="item">Security 2</li>
+		      <li class="item">Security</li>
 		      <li class="item">Web development</li>
 		      <li class="item">Bioinformatics</li>
 		      <li class="item">Competitive programing</li>
@@ -71,9 +73,9 @@
 		  
 		  <div class="divMenu divExperience">
 		  <h1 id="experience">Experience</h1>
-		  <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/ngsep.png" class="img-circle games"></a>
-		  <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/cupiTaller.png" class="img-circle games"></a>
-		  <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/uniandes.jpg" class="img-circle games"></a>
+		  <img src="./images/ngsep.png" class="img-circle games modals">
+		  <img src="./images/cupiTaller.png" class="img-circle games modals">
+		  <img src="./images/uniandes.jpg" class="img-circle games modals">
 		  </div>
 
 		  <div class="divMenu divGames">
@@ -95,6 +97,57 @@
           </div>
 
 		</div>
+
+<!--
+	modal init
+-->
+
+<!-- Trigger the modal with a button -->
+<div class="botonDiv">
+	
+<!--
+-->
+<button 
+style="visibility:hidden;" 
+id="boton" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementsByClassName("modals")[0];
+img.onclick = function(){
+    var b=document.getElementById("boton");
+    b.click();
+}
+</script>
+
+
+
+
 		
 		<!-- scripts -->
 
@@ -121,7 +174,7 @@
 		</script>
 
 		<script type="text/javascript">
-			var colors =["#00b300","blue","red","#ff6600","#660066","#x"];
+			var colors =["#00b300","#d6d6c2","red","#ff6600","#660066","#x"];
 			var ul = document.getElementById("lista");
 			var itemsP = ul.getElementsByTagName("li");
 
