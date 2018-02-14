@@ -91,8 +91,12 @@
 
           <div class="divMenu divSkills">
           	  <h1 id="skills"> Skills </h1>
-              <a  href="https://www.chess.com/stats/live/germancandradem?type=blitz" target="_blank"><img src="./images/lider.jpg" class="img-circle games"></a>
-		      <a  href="http://us.battle.net/sc2/en/profile/1362738/2/Hanibal/" target="_blank"><img src="./images/creativity.png" class="img-circle games" /> </a>
+              
+              	<img src="./images/lider.jpg" class="img-circle games">
+              
+		      
+		      	<img src="./images/creativity.png" class="img-circle games" /> 
+		      
 			
           </div>
 
@@ -114,16 +118,23 @@ id="boton" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-ta
 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <h4 id="titulo" class="modal-title">Modal Header</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+      	<div align="center">
+      			
+      	<img id="imagen" src="" height="80%" width="80%" align="center">
+      	</div>
+        <p id="descripcion">Some text in the modal.</p>
+        <p id="position"></p>
+      	<p id="date"></p>
+      	<a id="link" target="_blank" href="">link</a>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -133,17 +144,6 @@ id="boton" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-ta
   </div>
 </div>
 
-<script>
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementsByClassName("modals")[0];
-img.onclick = function(){
-    var b=document.getElementById("boton");
-    b.click();
-}
-</script>
 
 
 
@@ -173,6 +173,39 @@ img.onclick = function(){
 });  
 		</script>
 
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+var imgs = document.getElementsByClassName("modals");
+for (var i = imgs.length - 1; i >= 0; i--) {
+	asignar(imgs[i]);
+}
+
+function asignar(img)
+{
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+img.onclick = function(){
+    var b=document.getElementById("boton");
+console.log(img);
+var route = img.src.split("images")[1].split(".")[0];
+route="./jsons"+route+".json";
+//route=route.replace("/","\\");
+console.log(route);
+var json=$.getJSON(route,function(data){
+	console.log(data);
+$("#titulo").text(data.titulo);
+$("#descripcion").text(data.descripción);
+$("#imagen").attr("src",data.imagen);
+$("#position").text("Position: "+data.position);
+$("#date").text("Date: "+data.date);
+$("#link").attr("href",data.link);
+});
+    b.click();
+}
+}
+
+</script>
 		<script type="text/javascript">
 			var colors =["#00b300","#d6d6c2","red","#ff6600","#660066","#x"];
 			var ul = document.getElementById("lista");

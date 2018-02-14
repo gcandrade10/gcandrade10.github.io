@@ -1,0 +1,8 @@
+{
+  "titulo": "NGSEP",
+  "imagen": "./images/research.jpg",
+  "descripción": "Working on developing an aligner for short reads against a reference genome based in an Index FM.",
+    "position":"Research intern",
+    "date":"7/17 -",
+  "link": "https://github.com/NGSEP/NGSEPcore"
+}

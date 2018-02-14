@@ -35,7 +35,13 @@ div{
 h1 {
     color: white !important;
 }
-.games
+
+.imagen
+{
+height: 11% !important;
+width: 11% !important;    
+}
+.games 
 {
 height: 21%;
 width: 21%;

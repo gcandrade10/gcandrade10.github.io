@@ -1,0 +1,8 @@
+{
+  "titulo": "Cupitaller",
+  "imagen": "./images/tutor.jpg",
+  "descripción": "Helping engineering students with object-oriented programming",
+    "position":"Tutor",
+    "date":"2/15 - 5/15",
+  "link": "https://cupitaller.uniandes.edu.co/"
+}
