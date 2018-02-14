@@ -1,8 +1,13 @@
-/*
-div{
-	margin: 20px 20px 20px 20px;
+.contact
+{
+    height: 5% !important;
+    width: 5% !important; 
 }
-*/
+
+p
+{
+    color: white !important;
+}
 
 .botonDiv
 {
@@ -58,29 +63,16 @@ width: 21%;
   width:100%;
 }
 
-.divHome
+.divHome,   .divExperience, .divSkills
 {
 	background-color: #000b1a;
 }
 
-.divInterests
+.divInterests, .divGames, .divContact
 {
 	background-color: #001533;
 }
 
-.divExperience
-{
-	background-color:#000b1a;
-}
-
-.divGames
-{
-	background-color:#001533;
-}
-.divSkills
-{
-	background-color:#000b1a;
-}
 
 .item 
 { 
