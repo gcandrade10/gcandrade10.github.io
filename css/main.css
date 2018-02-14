@@ -6,7 +6,12 @@
 
 p
 {
-    color: white !important;
+    color: black !important;
+}
+
+.pContact
+{
+     color: white !important;
 }
 
 .botonDiv
