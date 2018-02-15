@@ -12,8 +12,8 @@
       
       <meta charset='utf-8'>
 	</head>
-	<body>
-
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
@@ -22,7 +22,7 @@
 		        <span class="icon-bar">2</span>
 		        <span class="icon-bar">3</span> 
 		      </button>
-		      <a class="navbar-brand" href="#">Germán Andrade</a>
+		      <a class="navbar-brand" href="#home">Germán Andrade</a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav">
@@ -45,8 +45,6 @@
 		    -->
 
 		<div align="center">
-		  <br/>
-		  <br/>
 		  <div class="divMenu divHome">
 		  	
 		  <h1 id="home">Germán Andrade</h1>
@@ -61,8 +59,8 @@
 
 		  </div>
 
-		  <div class="divMenu divInterests">
-            <h1 id="interests"> Interests </h1>
+		  <div id="interests" class="divMenu divInterests">
+            <h1 > Interests </h1>
             <ul id="lista">
 		      <li class="item">Security</li>
 		      <li class="item">Web development</li>
@@ -94,7 +92,7 @@
           </div>
 
           <div class="divMenu divContact">
-          	  <h1 id="skills"> Contact </h1>
+          	  <h1 id="contact"> Contact </h1>
               	<p class="pContact" color="white" align="rigth">gc.andrade10@uniandes.edu.co</p>
               	<a href="https://www.facebook.com/profile.php?id=100018436961744" target="_blank">
               	<img src="./images/facebook.png" class="img-circle contact" /> 
@@ -155,6 +153,9 @@
 
 		
 		<!-- scripts -->
+
+		
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
        	<!-- Latest compiled and minified CSS -->
        	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -175,5 +176,18 @@
 
 		<script src="./scripts/actualizarModal.js"></script>
 		<script type="text/javascript" src="./scripts/randomColors.js"></script>
+
+		<script>
+		//insert this in your jquery
+		//control the resizing of menu and go down the content in the correct position
+
+		    $("#navMenu").resize(function () {
+		        $('#godown').height($("#navMenu").height() + 10);
+		    });
+
+		    if ($("#navMenu").height() > $('#godown').height()) $('#godown').height($("#navMenu").height() + 10);
+
+		</script>
+
 	</body>
 </html>

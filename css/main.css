@@ -89,7 +89,12 @@ width: 21%;
 /*
 nuevo
 */
-body {font-family: Arial, Helvetica, sans-serif;}
+body 
+{
+	font-family: Arial, Helvetica, sans-serif;
+	/*avoid hide of top content*/
+	padding-top: 50px; 
+}
 
 #myImg {
     border-radius: 5px;
