@@ -68,12 +68,12 @@ width: 21%;
   width:100%;
 }
 
-.divHome,   .divExperience, .divSkills
+.divExperience, .divSkills, .divInterests
 {
 	background-color: #000b1a;
 }
 
-.divInterests, .divGames, .divContact
+.divWeb, .divGames, .divContact, .divHome
 {
 	background-color: #001533;
 }

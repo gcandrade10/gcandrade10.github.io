@@ -8,11 +8,22 @@ for (var i = imgs.length - 1; i >= 0; i--)
 }
 function asignar(img)
 {
+	var tempSrc=img.src;
+	var route = img.src.split("images")[1].split(".")[0];
+	img.onmouseover = function(){
+		//img.style.opacity = "0.5"
+		img.src="/../images/lupa.png";
+	};
+
+	img.onmouseout = function(){
+		img.src=tempSrc;
+	};
+	onmouseout="this.src='LibraryTransparent.png';"
+
 	img.onclick = function()
 	{
 		var b=document.getElementById("boton");
 		console.log(img);
-		var route = img.src.split("images")[1].split(".")[0];
 		route="./jsons"+route+".json";
 		//route=route.replace("/","\\");
 		console.log(route);
